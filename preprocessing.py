@@ -26,7 +26,7 @@ for nama_file in os.listdir(folder_asal):
 
 print(f"Proses selesai di: {folder_tujuan}")
 
-# --- BAGIAN 2: KODE VERIFIKASI (VERSI PERBAIKAN UNTUK SUB-FOLDER) ---
+# --- BAGIAN 2: KODE VERIFIKASI ---
 print("\n=== MEMULAI AUDIT DATA ===")
 
 # Tentukan sub-folder mana yang ingin diaudit (misal: folder Clean)
@@ -44,7 +44,7 @@ if os.path.exists(sub_folder_audit) and len(os.listdir(sub_folder_audit)) > 0:
         # Simulasi normalisasi (0-1)
         img_norm = img_cek.astype('float32') / 255.0
 
-        # CETAK BUKTI UNTUK LAPORAN (Nama file asli Anda akan muncul di sini)
+        # CETAK BUKTI
         print(f"Audit Berhasil pada file: {nama_file_asli}") 
         print(f"Ukuran Piksel: {img_cek.shape[1]} x {img_cek.shape[0]}")
         print(f"Nilai Maksimum: {np.max(img_norm):.4f}")
